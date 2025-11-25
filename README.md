@@ -1,84 +1,81 @@
-🎮 Jogo da Forca
+🎮 Jogo da Forca — LP
 
-Este projeto é um jogo da forca desenvolvido para a disciplina de Linguagem de Programação (LP). O objetivo do projeto é aplicar conceitos fundamentais de programação, como estruturas de repetição, condicionais, manipulação de strings e interação com o usuário.
+Este é um Jogo da Forca desenvolvido em Python como projeto da disciplina de LP (Linguagem de Programação).
+O objetivo do jogo é permitir que o jogador tente adivinhar uma palavra secreta através de tentativas de letras ou do chute da palavra inteira, utilizando lógica de repetição, condicionais e manipulação de strings.
 
-📝 Descrição do Jogo
+📝 Sobre o Jogo
 
-O jogo funciona da seguinte forma:
+O programa seleciona uma palavra aleatória de uma lista pré-definida.
+O jogador pode:
 
-- O programa escolhe (ou recebe) uma palavra secreta.
+Digitar uma letra por vez, ou
 
-- O jogador tenta adivinhar a palavra informando letras.
+Tentar adivinhar a palavra inteira.
 
-- A cada erro, partes do boneco da forca vão sendo desenhadas.
+A cada erro, uma tentativa é perdida. O jogo termina quando:
 
-- O jogador vence ao descobrir todas as letras antes que o boneco seja completado.
+✔️ O jogador descobre todas as letras
+❌ Ou quando suas tentativas chegam a zero
 
-✨ Funcionalidades
+O jogo fornece feedback constante ao jogador sobre:
 
-- Seleção de palavra secreta
+Letras já usadas
 
-- Exibição das letras adivinhadas corretamente
+Estado atual da palavra
 
-- Contagem de tentativas
+Número de tentativas restantes
 
-- Desenho da forca a cada erro
+✨ Funcionalidades Implementadas
 
-- Verificação automática de vitória ou derrota
+- Sorteio automático da palavra secreta
 
-- Tratamento de letras repetidas
+- Tentativas limitadas (6 erros)
 
-🛠 Tecnologias utilizadas
+- Aceita letras ou palavra inteira como chute
 
-Linguagem utilizada: Python
+- Bloqueia letras repetidas
 
-Conceitos aplicados:
+- Verifica se o chute é válido
 
-Estruturas de decisão
+- Atualiza as letras descobertas dinamicamente
 
-Estruturas de repetição
+- Mensagens amigáveis com emojis de feedback
 
-Arrays ou listas
+🛠 Tecnologias Utilizadas
 
-Manipulação de strings
+- Python 3
 
-Funções/Métodos
+- Biblioteca padrão random
 
-(Se quiser, posso colocar a linguagem para você — é só me dizer qual foi!)
+🧠 Lógica do Código (Resumo)
 
-▶️ Como executar
+- Uma lista de palavras é definida
 
-Baixe ou clone o repositório:
+- Uma delas é sorteada com random.choice()
 
-git clone https://github.com/seu-repositorio/jogo-da-forca.git
+- O jogador interage pelo terminal
 
+- Letras corretas substituem “_” na palavra
 
-Abra o projeto na sua IDE ou editor de código.
+- Chutes inválidos reduzem tentativas
 
-Compile e execute o arquivo principal do projeto.
+- Vitória ou derrota é informada ao final
 
-📂 Estrutura do projeto (exemplo)
-src/
- ├── Forca.java
- ├── Jogo.java
- └── Main.java
+💻 Trecho do Código Principal
+palavras = ["python", "computador", "programacao", "terminal", "jogo",
+            "algoritmo", "linguagem", "banco de dados", "laboratorio"]
 
-
-(Posso ajustar essa parte conforme a estrutura do seu projeto real.)
-
-📸 Imagens / Demonstração (opcional)
-
-Adicione prints aqui quando quiser:
-
-![Screenshot](caminho/para/imagem.png)
+palavra = random.choice(palavras)
+letras_descobertas = ["_"] * len(palavra)
+tentativas = 6
+letras_usadas = []
 
 👨‍🏫 Disciplina
 
-LP — Linguagem de Programação
-Projeto desenvolvido para fins acadêmicos.
+- LP — Linguagem de Programação
 
-👤 Autores
+- Projeto desenvolvido para fins acadêmicos.
 
-(seu nome aqui)
+👤 Autor(a)
 
-(colegas, se houver)
+- Bianca Milani
