@@ -1,4 +1,4 @@
-Jogo da Forca — LP
+# Jogo da Forca — LP
 
 Este é um Jogo da Forca desenvolvido em Python como projeto da disciplina de LP (Linguagem de Programação).
 O objetivo do jogo é permitir que o jogador tente adivinhar uma palavra secreta através de tentativas de letras ou do chute da palavra inteira, utilizando lógica de repetição, condicionais e manipulação de strings.
